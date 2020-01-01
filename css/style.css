@@ -1,6 +1,7 @@
 :root {
   --inner: 960px;
   --bgGradation: linear-gradient(0deg, #ffdd02  0%, #fb8eb5 100%);
+  --h2: 32px;
 }
 
 *{
@@ -169,10 +170,9 @@ header .inner{
 ------------------------------------------------ */
 .mk-what{
   padding-top: 40px;
-  margin-bottom: 32px;
 }
 .mk-what h2{
-  font-size: 48px;
+  font-size: var(--h2);
   margin: 0 auto 36px auto;
   text-align: center;
   width: var(--inner);
@@ -200,23 +200,34 @@ header .inner{
   object-fit: cover;
 }
 
-/* 一覧
+/* ３つのテーマ
 ------------------------------------------------ */
-.mk-events{
+.mk-theme{
   padding-top: 40px;
-  padding-bottom: 40px;
-  background-color: #ebf0ff;
+  margin-bottom: 32px;
 }
-/* 一覧　タブ */
-.mk-events__nav{
+.mk-theme h2{
+  font-size: var(--h2);
+  margin: 0 auto 36px auto;
+  text-align: center;
+  width: var(--inner);
+}
+.mk-theme__desc{
+  line-height: 1.6;
+  margin: 0 auto 48px auto;
+  text-align: center;
+  width: var(--inner);
+}
+/* ３つのテーマ　タブ */
+.mk-theme__nav{
   width: var(--inner);
   margin: 0 auto 40px auto;
 }
-.mk-events__nav ul{
+.mk-theme__nav ul{
   display: flex;
 }
-.mk-events__nav li{
-  width: 25%;
+.mk-theme__nav li{
+  width: 33%;
   height: 48px;
   display: flex;
   justify-content: center;
@@ -224,11 +235,32 @@ header .inner{
   background-color: #03d1c2;
   border-right: 1px solid #fff;
 }
-.mk-events__nav li:last-child{
+.mk-theme__nav li:last-child{
+  width: 34%;
   border-right: none;
 }
-.mk-events__nav a{
+.mk-theme__nav a{
   color: #fff;
+}
+
+/* 一覧
+------------------------------------------------ */
+.mk-events{
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #ebf0ff;
+}
+.mk-events h2{
+  font-size: var(--h2);
+  margin: 0 auto 36px auto;
+  text-align: center;
+  width: var(--inner);
+}
+.mk-events__desc{
+  line-height: 1.6;
+  margin: 0 auto 48px auto;
+  text-align: center;
+  width: var(--inner);
 }
 /* 一覧　一覧 */
 .mk-events__items{
@@ -306,7 +338,7 @@ header .inner{
   padding-bottom: 80px;
 }
 .mk-contact h2{
-  font-size: 48px;
+  font-size: var(--h2);
   margin: 0 auto 36px auto;
   text-align: center;
   width: var(--inner);
