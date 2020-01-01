@@ -4,14 +4,17 @@
 }
 
 *{
-  color: #333;
   line-height: 1;
 }
 h1{
   width: var(--inner);
-  height: 56px;
+  height: 80px;
   margin: 0 auto;
   padding: 8px 0;
+}
+h1 a{
+  display: inline-block;
+  height: 100%;
 }
 header .inner{
   background: var(--bgGradation);
@@ -63,7 +66,11 @@ header .inner{
   background-color: #f1f1f1;
 }
 .mk-slider .item__meta__state{
-  padding: 20px;
+  height: 56px;
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #22b1ed;
   color: #fff;
 }
@@ -82,7 +89,7 @@ header .inner{
   background: #fff;
 }
 
-/* slickの矢印 */
+/* スライダー　矢印 */
 .slick-arrow{
   position: absolute;
   text-indent: -100vw;
@@ -168,13 +175,13 @@ header .inner{
   font-size: 48px;
   margin: 0 auto 36px auto;
   text-align: center;
-  max-width: var(--inner);
+  width: var(--inner);
 }
 .mk-what__desc{
   line-height: 1.6;
   margin: 0 auto 48px auto;
   text-align: center;
-  max-width: var(--inner);
+  width: var(--inner);
 }
 .mk-what__grlly {
   padding: 32px 0;
@@ -193,5 +200,169 @@ header .inner{
   object-fit: cover;
 }
 
-/* リンク
+/* 一覧
 ------------------------------------------------ */
+.mk-events{
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #ebf0ff;
+}
+/* 一覧　タブ */
+.mk-events__nav{
+  width: var(--inner);
+  margin: 0 auto 40px auto;
+}
+.mk-events__nav ul{
+  display: flex;
+}
+.mk-events__nav li{
+  width: 25%;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #03d1c2;
+  border-right: 1px solid #fff;
+}
+.mk-events__nav li:last-child{
+  border-right: none;
+}
+.mk-events__nav a{
+  color: #fff;
+}
+/* 一覧　一覧 */
+.mk-events__items{
+  width: var(--inner);
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.mk-events__items .item{
+  width: 290px;
+  margin-bottom: 40px;
+  background-color: #fff;
+}
+.mk-events__items .item:nth-child(3n + 1){
+  margin-right: 30px;
+}
+.mk-events__items .item:nth-child(3n + 2){
+  margin-right: 15px;
+  margin-left: 15px;
+}
+.mk-events__items .item:nth-child(3n){
+  margin-left: 30px;
+}
+
+.mk-events__items .item__meta{
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+}
+.mk-events__items .item__meta__state{
+  height: 36px;
+  width: 80px;
+  margin-right: 20px;
+  background-color: #000000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mk-events__items .item__title{
+  padding: 12px 16px 24px 16px;
+}
+
+/* 一覧　ページネーション */
+.mk-events__pages {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.mk-events__pages li{
+  width: 40px;
+  height: 40px;
+  border: 1px solid #aaa;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 16px;
+}
+.mk-events__pages li:last-child{
+  margin-right: 0;
+}
+.mk-events__pages li.active{
+  background-color: #06afec;
+}
+.mk-events__pages li.active a{
+  color: #fff;
+}
+
+/* contact
+------------------------------------------------ */
+
+.mk-contact {
+  padding-top: 40px;
+  padding-bottom: 80px;
+}
+.mk-contact h2{
+  font-size: 48px;
+  margin: 0 auto 36px auto;
+  text-align: center;
+  width: var(--inner);
+}
+.mk-contact__dscr{
+  margin: 0 auto 36px auto;
+  line-height: 1.6;
+  text-align: center;
+  width: var(--inner);
+}
+.mk-contact__dscr span{
+  display: block;
+  font-weight: bold;
+  color: red;
+}
+.mk-contact__form{
+  background-color: #ebf0ff;
+  width: var(--inner);
+  margin: 0 auto;
+  padding: 40px 160px 40px 160px;
+}
+.mk-contact__form p{
+  margin-bottom: 8px;
+  font-weight: bold;
+  line-height: 1.6;
+}
+.mk-contact__form input[type="text"]{
+  padding: 8px;
+  width: 50%;
+  margin-bottom: 16px;
+  border: 1px solid #dedede;
+}
+.mk-contact__form textarea{
+  padding: 8px;
+  width: 100%;
+  height: 240px;
+  border: 1px solid #dedede;
+  margin-bottom: 24px;
+}
+.mk-contact__form button{
+  background: #ff8a65;
+  color: #fff;
+  height: 48px;
+  width: 128px;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 auto;
+  display: block;
+}
+footer{
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
