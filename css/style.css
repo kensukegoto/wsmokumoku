@@ -326,6 +326,7 @@ header .inner{
 }
 .mk-events__items .item__title{
   padding: 12px 16px 24px 16px;
+  line-height: 1.6;
 }
 
 /* 一覧　ページネーション */
@@ -417,8 +418,9 @@ footer{
   color: #fff;
   text-align: center;
   font-weight: bold;
-  height: 80px;
+  height: 48px;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 14px;
 }
