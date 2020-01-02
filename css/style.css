@@ -232,15 +232,39 @@ header .inner{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #03d1c2;
+  background-color: #00d6c8;
   border-right: 1px solid #fff;
 }
 .mk-theme__nav li:last-child{
   width: 34%;
   border-right: none;
 }
+.mk-theme__nav li.active{
+  background-color: #36a19a;
+}
 .mk-theme__nav a{
   color: #fff;
+}
+.mk-theme__items {
+  width: var(--inner);
+  margin: 0 auto 40px auto;
+}
+.mk-theme__items .item{
+  display: flex;
+}
+.mk-theme__items .item__part{
+  width: 50%;
+}
+.mk-theme__items h3{
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+
+.mk-theme__items .item li {
+  margin-bottom: 16px;
+}
+.mk-theme__items .item i {
+  margin-right: 8px;
 }
 
 /* 一覧
