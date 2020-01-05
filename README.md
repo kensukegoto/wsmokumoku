@@ -1,3 +1,9 @@
+# オープニング
+
+- cdnでjQueryを読む
+- slickをイニシャライズ
+- 余白を作る
+
 # slider
 
 [公式サイト](http://kenwheeler.github.io/slick/)
@@ -19,6 +25,11 @@
   - 矢印を作成する
 
 # infomation
+
+[凄く分かりやすい](https://macoblog.com/jquery_read_json/)
+[jQueryを用いてAjaxの学習をした](http://tech-blog.rakus.co.jp/entry/20190612/javascript/beginner)
+
+[WEBサーバーをChromeに入れる]https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb?hl=ja&
 
 - jsonを取得し１つ１つ表示させていく
 - moreを押すとモーダルが開く

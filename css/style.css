@@ -130,11 +130,19 @@ header .inner{
   border: 1px solid #aaa;
   overflow: hidden;
 }
-
+.mk-info__lists{
+  height: inherit;
+  position: relative;
+  height: inherit;
+  width: calc(100% - 80px);
+}
 .mk-info__lists .list{
-  display: flex;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   opacity: 1;
   transition: transform .3s,opacity .3s;
+  white-space: nowrap;
 }
 .mk-info__lists .list.prev{
   transform: translateY(-48px);
@@ -148,6 +156,9 @@ header .inner{
 .mk-info__lists .list time {
   color: #aaa;
   margin: 0 20px;
+}
+.mk-info__lists .list p{
+  display: inline;
 }
 .mk-info__more {
   display: flex;
