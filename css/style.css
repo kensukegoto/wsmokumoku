@@ -40,7 +40,7 @@ header .inner{
   width: 100%;
 }
 .mk-slider .item{
-  margin: 0 25px;
+  /* margin: 0 25px; */
   width: 33%;
   float: left;
   position: relative;
@@ -251,6 +251,7 @@ header .inner{
 }
 .mk-theme__items .item{
   display: flex;
+  margin-bottom: 40px;
 }
 .mk-theme__items .item__part{
   width: 50%;
