@@ -32,9 +32,9 @@
 [WEBサーバーをChromeに入れる]https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb?hl=ja&
 
 - jsonを取得し１つ１つ表示させていく
+- お知らせの切替時にアニメーション
 - moreを押すとモーダルが開く
 - モーダルの中身に一覧が表示される
-- お知らせの切替時にアニメーション
 
 # カルーセル
 
