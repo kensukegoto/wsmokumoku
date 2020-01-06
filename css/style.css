@@ -436,3 +436,70 @@ footer{
   align-items: center;
   font-size: 14px;
 }
+
+/* モーダル
+------------------------------------------------ */
+.mk-info__modal{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  color: #fff;
+}
+
+
+.mk-info__modal h2 {
+  font-size: var(--h2);
+}
+.mk-info__modal li {
+  line-height: 1.6;
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.mk-info__close{
+  text-indent: 100%;
+  overflow: hidden;
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  top: 0;
+  right: 0;
+  text-indent: -9999px;
+  transform: rotate(45deg);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.mk-info__close::before{
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display: block;
+  height: 2px;
+  width: 80%;
+  background-color: #fff;
+  transform-origin: left;
+}
+.mk-info__close::after{
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display: block;
+  height: 80%;
+  width: 2px;
+  background-color: #fff;
+  transform-origin: left;
+}

@@ -30,6 +30,7 @@
 [jQueryを用いてAjaxの学習をした](http://tech-blog.rakus.co.jp/entry/20190612/javascript/beginner)
 
 [WEBサーバーをChromeに入れる]https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb?hl=ja&
+[モーダル表示時に背景をスクロールさせない](https://coliss.com/articles/build-websites/operation/javascript/prevent-page-scrolling-when-a-modal-is-open.html)
 
 - jsonを取得し１つ１つ表示させていく
 - お知らせの切替時にアニメーション
