@@ -90,3 +90,47 @@ $.ajax({
   }
 
 })();
+
+
+/**
+ * カルーセル
+ */
+(()=>{
+  var garally = document.querySelector(".mk-what__grlly__items");
+  var copy = garally.cloneNode(true);
+  var winW = window.innerWidth;
+  var onesetW = garally.offsetWidth;
+  var loop = Math.ceil(winW / onesetW);
+
+  var limit = loop * onesetW;
+  for(var i = 0; i < loop * 2 - 1; i++){
+    var clone = [...copy.cloneNode(true).children];
+    clone.forEach( n =>{
+      garally.appendChild(n)
+    })
+  }
+
+  var pos = 0;
+  var stop = false;
+
+  setInterval(()=>{
+
+    if(stop) return;
+
+    if ((limit  + pos) === 0 ){
+      pos = 0;
+    } else {
+      --pos;
+    }
+    garally.style.transform = "translateX(" + pos + "px)";
+
+  },16);
+
+  garally.addEventListener("mouseenter",()=>{
+    stop = true;
+  });
+  garally.addEventListener("mouseleave",()=>{
+    stop = false;
+  });
+
+})();

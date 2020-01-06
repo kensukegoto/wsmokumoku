@@ -39,6 +39,9 @@
 
 # カルーセル
 
+[参考](http://black-flag.net/jquery/20160802-6170.html)
+[transformでz-indexがずれる](https://arakaze.ready.jp/archives/1936)
+
 - 画像が無限ループで横に流れる
 - ホバーすると横に流れる動きが止まり拡大表示される
 
