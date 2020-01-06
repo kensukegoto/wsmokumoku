@@ -1,8 +1,8 @@
-// $('.mk-slider').slick({
-//   infinite: true,
-//   slidesToShow: 3,
-//   slidesToScroll: 1 // 1枚ずつ
-// });
+$('.mk-slider').slick({
+  infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 1 // 1枚ずつ
+});
 
 $.ajax({
   url: "./infomation.json",
@@ -132,5 +132,37 @@ $.ajax({
   garally.addEventListener("mouseleave",()=>{
     stop = false;
   });
+
+})();
+
+(()=>{
+
+  var active = document.querySelector(".mk-theme__nav .active");
+  var tabs = document.querySelector(".mk-theme__items");
+  var theme = active.dataset.theme;
+
+  activeTab(theme);
+  document.querySelector(".mk-theme__nav").querySelectorAll("li").forEach(e => {
+ 
+    e.addEventListener("click", t => {
+
+      var target = t.currentTarget.dataset.theme;
+      document.querySelector(".mk-theme__nav .active").classList.remove("active");
+      t.currentTarget.classList.add("active");
+
+      activeTab(target)
+    })
+  });
+
+  function activeTab(active){
+    tabs.querySelectorAll(".item").forEach(e => {
+      var myTheme = e.dataset.theme;
+      if(active === myTheme){
+        e.style.display = "flex";
+      }else{
+        e.style.display = "none";
+      }
+    })
+  }
 
 })();
