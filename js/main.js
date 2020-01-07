@@ -135,6 +135,9 @@ $.ajax({
 
 })();
 
+/**
+ * タブ
+ */
 (()=>{
 
   var active = document.querySelector(".mk-theme__nav .active");
@@ -163,6 +166,61 @@ $.ajax({
         e.style.display = "none";
       }
     })
+  }
+
+})();
+
+/**
+ * ページネーション
+ */
+(()=>{
+
+  var wrapper = document.querySelector(".mk-events__items");
+  var items = wrapper.querySelectorAll(".item");
+  var pageNum = Math.ceil(items.length / 6);
+
+  // ページネーション作成
+  var pN = document.querySelector(".mk-events__pages");
+  for(var i = 1,l = pageNum;i <= l; i++){
+    var p = document.createElement("li");
+    var a = document.createElement("a");
+    p.appendChild(a);
+    p.addEventListener("click",e =>{
+      var dataPage = +e.currentTarget.dataset.page;
+      showItems(dataPage);
+    });
+    a.innerText = i;
+    p.dataset.page = i;
+    
+    pN.appendChild(p);
+  }
+  
+  // 何ページ目のコンテンツか
+  for(var i = 0,l = items.length;i < l;i++){
+    var page = Math.ceil((i + 1) / 6);
+    items[i].dataset.page = page;
+  }
+
+  showItems(1);
+
+  function showItems(page){
+
+    if(pN.querySelector("li.active")){
+      pN.querySelector("li.active").classList.remove("active");
+    }
+
+    pN.querySelectorAll("li")[page-1].classList.add("active");
+
+    for(var i = 0,l = items.length;i < l;i++){
+
+      var dataPage = +items[i].dataset.page;
+
+      if(page === dataPage){
+        items[i].classList.add("active");
+      } else {
+        items[i].classList.remove("active");
+      }
+    }
   }
 
 })();

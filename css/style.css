@@ -323,6 +323,10 @@ main{
   width: 290px;
   margin-bottom: 40px;
   background-color: #fff;
+  display: none;
+}
+.mk-events__items .item.active{
+  display: block;
 }
 .mk-events__items .item:nth-child(3n + 1){
   margin-right: 30px;
