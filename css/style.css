@@ -8,16 +8,7 @@
   line-height: 1;
 }
 
-h1{
-  width: var(--inner);
-  height: 80px;
-  margin: 0 auto;
-  padding: 8px 0;
-}
-h1 a{
-  display: inline-block;
-  height: 100%;
-}
+
 header .inner{
   background: var(--bgGradation);
   padding-top: 72px;
@@ -25,6 +16,73 @@ header .inner{
 }
 main{
   overflow: hidden;
+}
+/* ハンバーガー
+------------------------------------------------ */
+.inner--top{
+  width: var(--inner);
+  height: 80px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.inner--top h1{
+  display: inline-block;
+  height: 100%;
+  padding: 8px 0;
+}
+
+.burger__btn{
+  top: 0;
+  right: 0;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.burger__btn a {
+  display: block;
+  width: 48px;
+  height: 48px;
+  position: relative;
+}
+.burger__btn span{
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #000;
+  transition: transform .3s;
+}
+
+.burger__btn span:first-child{
+  top: 0;
+}
+.burger__btn span:nth-child(2){
+  top: calc(50% - 1px);
+}
+.burger__btn span:last-child{
+  bottom: 0;
+}
+/*
+* close
+*/
+.open.close .menu--btn span{
+  background-color: #fff;
+}
+.burger__btn.open span:first-child{
+  transform: rotate(45deg);
+}
+.burger__btn.open span:nth-child(2){
+  opacity: 0;
+}
+.burger__btn.open span:last-child{
+  transform: rotate(-45deg);
+}
+
+/* close ----------------------------------*/
+.burger__modal{
+  display: none;
 }
 
 /* スライダー
@@ -44,7 +102,7 @@ main{
   width: 100%;
 }
 .mk-slider .item{
-  /* margin: 0 25px; */
+  margin: 0 25px;
   width: 33%;
   float: left;
   position: relative;
@@ -259,12 +317,15 @@ main{
   align-items: center;
   background-color: #00d6c8;
   border-right: 1px solid #fff;
+  cursor: pointer;
 }
+
 .mk-theme__nav li:last-child{
   width: 34%;
   border-right: none;
 }
-.mk-theme__nav li.active{
+.mk-theme__nav li.active,
+.mk-theme__nav li:hover{
   background-color: #36a19a;
 }
 .mk-theme__nav a{
@@ -569,3 +630,4 @@ footer{
   transform: translateY(0%);
   opacity: 1;
 }
+
