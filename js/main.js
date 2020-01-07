@@ -287,3 +287,28 @@ $.ajax({
 
   
 })();
+
+/**
+ * トップへ戻る
+ */
+(()=>{
+
+  var main = document.querySelector("main");
+  var start = window.pageYOffset + main.getBoundingClientRect().top;
+
+  var btnTop = document.querySelector(".btnTop");
+
+  btnTop.addEventListener("click",e =>{
+    e.preventDefault();
+    $("html, body").animate({scrollTop: 0 }, 500, "swing")
+  });
+
+  window.addEventListener("scroll",e => {
+      if( start  < window.pageYOffset ){
+        btnTop.classList.add("active");
+      } else {
+        btnTop.classList.remove("active");
+      }
+  })
+
+})();
