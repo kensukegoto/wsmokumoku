@@ -135,6 +135,7 @@ $.ajax({
 
 })();
 
+
 /**
  * タブ
  */
@@ -170,6 +171,7 @@ $.ajax({
 
 })();
 
+
 /**
  * ページネーション
  */
@@ -185,7 +187,7 @@ $.ajax({
     var p = document.createElement("li");
     var a = document.createElement("a");
     p.appendChild(a);
-    p.addEventListener("click",e =>{
+    p.addEventListener("click",e => {
       var dataPage = +e.currentTarget.dataset.page;
       showItems(dataPage);
     });
@@ -223,4 +225,65 @@ $.ajax({
     }
   }
 
+})();
+
+
+/**
+ * バリデーション
+ */
+(()=>{
+
+  var form = document.querySelector(".mk-contact__form");
+  var inputs = form.querySelectorAll("input,textarea");
+  var submit = form.querySelector(".mk-contact__form button");
+
+  inputs.forEach( input => {
+    input.addEventListener("focus",validate);
+    input.addEventListener("input",validate);
+  });
+
+
+  function validate(e){
+
+    var value = e.target.value.trim();
+    var name = e.target.name;
+    var error = false;
+    var pattern = "";
+
+    switch(name){
+
+      case "name":
+        if(value === "") error = true;
+        break;
+      case "mail":
+        pattern = /^[A-Za-z0-9]{1}[A-Za-z0-9_.-]*@{1}[A-Za-z0-9_.-]{1,}\.[A-Za-z0-9]{1,}$/;
+        if(!pattern.test(value)) error = true;
+        break;
+      case "content":
+        if(value === "") error = true;
+        break;
+      default:
+        break;
+    }
+
+    if(error){
+      e.target.nextElementSibling.style.visibility = "visible";
+      e.target.dataset.validate = false;
+    }else{
+      e.target.nextElementSibling.style.visibility = "hidden";
+      e.target.dataset.validate = true;
+    }
+
+    var submitFlag = [];
+    inputs.forEach( input => {
+      submitFlag.push(input.dataset.validate);
+    })
+    
+    if(submitFlag.indexOf("false") === -1){
+      submit.disabled = false;
+    }
+
+  }
+
+  
 })();

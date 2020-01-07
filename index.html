@@ -313,14 +313,21 @@
       <span>※もくもく会のお申し込みは各イベントページのフォームよりお願い致します。</span></p>
       <form class="mk-contact__form" action="" method="POST">
         <p>お名前</p>
-        <p><input type="text"></p>
+        <p>
+          <input type="text" name="name" data-validate="false">
+          <span>お名前は必須です</span>
+        </p>
         <p>メールアドレス</p>
-        <p><input type="text"></p>
-        <p>電話番号</p>
-        <p><input type="text"></p>
+        <p>
+          <input type="email" name="mail" data-validate="false">
+          <span>メールアドレスが不正です</span>
+        </p>
         <p>お問い合わせ内容</p>
-        <p><textarea name="" id=""></textarea></p>
-        <p><button type="submit">送信</button></p>
+        <p>
+          <textarea name="content" data-validate="false"></textarea>
+          <span>お問い合わせ内容は必須です</span>
+        </p>
+        <p><button type="submit" name="submit" disabled>送信</button></p>
       </form>
     </section>
   </main>
