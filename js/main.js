@@ -63,7 +63,6 @@ $.ajax({
   modal.style.transition = "opacity " + duration + "ms";
   var modalFlag = false;
   
-  
   btnModal.addEventListener("click",modalToggle);
   btnModalClose.addEventListener("click",modalToggle);
   
@@ -311,4 +310,47 @@ $.ajax({
       }
   })
 
+})();
+
+/**
+ * ハンバーガー
+ */
+(()=>{
+  var duration = 300;
+  var btn = document.querySelector(".burger__btn");
+  btn.querySelectorAll("span").forEach(span => {
+    span.style.transition = "transform " + duration + "ms,background-color " + duration + "ms";
+  });
+  btn.addEventListener("click",toggleModal);
+
+  var modal = document.querySelector(".burger__modal");
+  modal.style.transition = "opacity " + duration + "ms";
+
+  modal.querySelectorAll("a").forEach(a => {
+    a.addEventListener("click",e => {
+      toggleModal();
+      var speed = 500;
+      var href= $(e.currentTarget).attr("href");
+      var target = $(href);
+      var position = target.offset().top - 80;
+      $("html, body").animate({scrollTop:position}, speed, "swing");
+      return false;
+    });
+  }); 
+
+  function toggleModal(e){
+
+    var target = btn;
+    var flg = target.classList.toggle("open");
+    modal.classList.toggle("open");
+    if(flg){
+      modal.style.visibility = "visible";
+      modal.style.opacity = 1;
+    }else{
+      modal.style.opacity = 0;
+      setTimeout(()=>{
+        modal.style.visibility = "hidden";
+      },duration)
+    }
+  }
 })();
