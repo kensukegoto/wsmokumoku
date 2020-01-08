@@ -354,3 +354,19 @@ $.ajax({
     }
   }
 })();
+
+/**
+ * Ｑ＆Ａ
+ */
+(()=>{
+  
+  var $q = $(".mk-qa__item dt");
+
+  $q.on("click",e =>{
+
+    $this = $(e.currentTarget);
+    $this.toggleClass("open");
+    $this.next().slideToggle();
+
+  })
+})();
