@@ -45,15 +45,15 @@
     </div>
   </header>
   
-  <main class="none">
+  <main class="main">
     <!-- start Gradation Area -->
-    <div>
+    <div class="bgc--grad main__head">
 
       <!-- slider -->
-      <section id="mk-slider" class="mk-slider pickup">
-
+      <section id="pickup" class="pickup">
+        <div class="pickup__slider">
           <div class="item">
-            <figure>
+            <figure class="item__image">
               <img src="./images/event_01.jpg" alt="">
             </figure>
             <div class="item__meta">
@@ -62,11 +62,11 @@
               <p class="item__meta__locate"><i class="fas fa-map-marker-alt"></i>渋谷</p>
             </div>
             <p class="item__title">実装でつまずいた人のための  JS駆け込み寺</p>
-            <a href=""></a>
+            <a class="item__link" href=""></a>
           </div>
           <div class="item">
-            <figure>
-              <img src="./images/event_02.jpg" alt="">
+            <figure class="item__image">
+              <img src="./images/event_01.jpg" alt="">
             </figure>
             <div class="item__meta">
               <p class="item__meta__state">受付中</p>
@@ -74,28 +74,54 @@
               <p class="item__meta__locate"><i class="fas fa-map-marker-alt"></i>渋谷</p>
             </div>
             <p class="item__title">実装でつまずいた人のための  JS駆け込み寺</p>
-            <a href=""></a>
+            <a class="item__link" href=""></a>
           </div>
-        </section>
-
-        <!-- infomation -->
-        <section class="info">
-
-          <ul class="info__list">
-            <li class="item">
-              <time></time><p></p>
-            </li>
-          </ul>
-
-          <a class="info__modal__open"><p>MORE</p></a>
-          <div class="info__modal">
-            <div class="info__modal__inner">
-              <ul class="info__modal__list"></ul>
+          <div class="item">
+            <figure class="item__image">
+              <img src="./images/event_01.jpg" alt="">
+            </figure>
+            <div class="item__meta">
+              <p class="item__meta__state">受付中</p>
+              <p class="item__meta__date"><i class="far fa-calendar"></i>2020.1.1</p>
+              <p class="item__meta__locate"><i class="fas fa-map-marker-alt"></i>渋谷</p>
             </div>
-            <a class="info__modal__close">閉じる</a>
+            <p class="item__title">実装でつまずいた人のための  JS駆け込み寺</p>
+            <a class="item__link" href=""></a>
           </div>
-          
-        </section>
+          <div class="item">
+            <figure class="item__image">
+              <img src="./images/event_01.jpg" alt="">
+            </figure>
+            <div class="item__meta">
+              <p class="item__meta__state">受付中</p>
+              <p class="item__meta__date"><i class="far fa-calendar"></i>2020.1.1</p>
+              <p class="item__meta__locate"><i class="fas fa-map-marker-alt"></i>渋谷</p>
+            </div>
+            <p class="item__title">実装でつまずいた人のための  JS駆け込み寺</p>
+            <a class="item__link" href=""></a>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- infomation -->
+      <section class="info none">
+
+        <ul class="info__list">
+          <li class="item">
+            <time></time><p></p>
+          </li>
+        </ul>
+
+        <a class="info__modal__open"><p>MORE</p></a>
+        <div class="info__modal">
+          <div class="info__modal__inner">
+            <ul class="info__modal__list"></ul>
+          </div>
+          <a class="info__modal__close">閉じる</a>
+        </div>
+        
+      </section>
 
     </div>
     <!-- end Gradation Area -->

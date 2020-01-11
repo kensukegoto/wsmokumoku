@@ -10,11 +10,14 @@ html{
 }
 body{
   /* chromeのバグ回避 bodyのremが効かない */
-  font-size: 1.4em;
+  font-size: 1.6em;
 }
 
 .none {
   display: none;
+}
+.bgc--grad{
+  background-image: var(--bgGradation);
 }
 
 .header{
@@ -35,7 +38,16 @@ body{
 }
 .header__inner h1 img{
   max-height: 100%;
+  width: auto;
 }
+
+.main{
+  margin-top: 60px;
+}
+.main__head{
+  padding-top: 48px;
+}
+
 /* ハンバーガー
 ------------------------------------------------ */
 .burger__btn{
@@ -114,4 +126,111 @@ body{
   font-size: 1.6rem;
   line-height: 2;
   border-bottom: 1px solid #aaa;
+}
+
+/* スライダー
+------------------------------------------------ */
+.pickup {
+  max-width: 960px;
+  margin: 0 auto;
+  margin-bottom: 48px;
+  position: relative;
+}
+.pickup .item{
+  position: relative;
+  margin: 0 24px;
+}
+.pickup .item__meta{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  background-color: #f1f1f1;
+}
+.pickup .item__meta__state {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 56px;
+  width: 33.3333%;
+  max-width: 80px;
+  background-color: #22b1ed;
+  color: #fff;
+}
+.pickup .item__meta__locate{
+  padding-right: 20px;
+}
+.pickup .item__meta .far,
+.pickup .item__meta .fas
+ {
+  margin-right: 8px;
+}
+.pickup .item__title{
+  font-weight: bold;
+  padding: 20px;
+  line-height: 1.6;
+  background: #fff;
+}
+
+.pickup .item__link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  opacity: 0;
+  transition: opacity .2s;
+}
+.pickup .item:hover .item__link{
+  opacity: .3;
+}
+
+/* スライダー　矢印 */
+.slick-arrow{
+  position: absolute;
+  text-indent: -100vw;
+  top: 50%;
+  z-index: 1;
+  width: 48px;
+  height: 64px;
+  color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.slick-arrow:hover,
+.slick-arrow:active{
+  opacity: .8;
+}
+
+.slick-prev{
+  left: 0px;
+  transform: translateY(-50%);
+  background-image: url(../images/arrow_left.png);
+  background-size: 50%;
+  
+}
+.slick-next{
+  right: 0px;
+  transform: translateY(-50%) rotate(180deg);
+  background-image: url(../images/arrow_left.png);
+  background-size: 50%;
+}
+
+@media screen and (min-width: 960px){
+  .pickup__slider{
+    width: calc(100% + 24px * 2);
+    transform: translateX(-24px);
+  }
+  .slick-prev{
+    transform: translate(-50%,-50%);
+  }
+  .slick-next{
+    transform: translate(50%,-50%) rotate(180deg);
+  }
 }
