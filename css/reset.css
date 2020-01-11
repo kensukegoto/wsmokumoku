@@ -108,3 +108,7 @@ img{
   max-height: 100%;
   vertical-align: bottom;
 }
+a{
+    text-decoration: none;
+    color: inherit;
+}

@@ -1,0 +1,117 @@
+:root{
+  --bgGradation: linear-gradient(0deg, #ffdd02  0%, #fb8eb5 100%);
+}
+
+*{
+  box-sizing: border-box;
+}
+html{
+  font-size: 62.5%;
+}
+body{
+  /* chromeのバグ回避 bodyのremが効かない */
+  font-size: 1.4em;
+}
+
+.none {
+  display: none;
+}
+
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 1px solid #efefef;
+}
+.header__inner{
+  max-width: 960px;
+  margin: 0 auto;
+}
+.header__inner h1 {
+  height: 60px;
+  padding: 8px;
+}
+.header__inner h1 img{
+  max-height: 100%;
+}
+/* ハンバーガー
+------------------------------------------------ */
+.burger__btn{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  cursor: pointer;
+  z-index: 3;
+}
+.burger__btn.open{
+  background-color: rgba(0,0,0,.0);
+}
+.burger__btn p{
+  width: 33%;
+  height: 33%;
+  position: absolute;
+  overflow: hidden;
+}
+
+.burger__btn span{
+  position: absolute;
+  width: 150%;
+  height: 2px;
+  background: #fff;
+}
+
+.burger__btn span:first-child{
+  top: 0;
+  transform-origin: top left;
+}
+.burger__btn span:nth-child(2){
+  top: calc(50% - 1px);
+}
+.burger__btn span:last-child{
+  bottom: 0;
+  transform-origin: bottom left;
+}
+/* close */
+.burger__btn.open span:first-child{
+  transform: rotate(45deg) translateY(-50%);
+}
+.burger__btn.open span:nth-child(2){
+  opacity: 0;
+}
+.burger__btn.open span:last-child{
+  transform: rotate(-45deg) translateY(50%);
+}
+/* modal */
+.burger__modal{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.burger__modal__inner{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: rgba(0,0,0,.8);
+}
+.burger__modal__menu li{
+  font-size: 1.6rem;
+  line-height: 2;
+  border-bottom: 1px solid #aaa;
+}
