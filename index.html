@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja"">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,11 +17,12 @@
   <script src="./js/main.js" defer></script>
 </head>
 <body>
-  <header>
+  <!-- header -->
+  <header class="header">
     <div class="inner--top">
-      <h1><a href="">
+      <h1>
         <img src="./images/logo.png" alt="ウェブスタッフではIT・Webクリエイター・エンジニア向けのイベント・セミナーを開催しています。スキルアップ、キャリアアップをお考えのクリエイターの方をサポートいたします。">
-      </a></h1>
+      </h1>
       <nav class="burger">
         <a class="burger__btn">
           <p>
@@ -40,354 +41,63 @@
         </div>
       </nav>
     </div>
-    <div class="inner">
-      <section id="mk-slider" class="mk-slider">
-
-        <div class="item">
-          <figure>
-            <img src="./images/event_01.jpg" alt="">
-          </figure>
-          <div class="item__meta">
-            <p class="item__meta__state">受付中</p>
-            <p class="item__meta__date"><i class="far fa-calendar"></i>2020.1.1</p>
-            <p class="item__meta__locate"><i class="fas fa-map-marker-alt"></i>渋谷</p>
-          </div>
-          <p class="item__title">実装でつまずいた人のための  JS駆け込み寺</p>
-          <a href=""></a>
-        </div>
-        <div class="item">
-          <figure>
-            <img src="./images/event_02.jpg" alt="">
-          </figure>
-          <div class="item__meta">
-            <p class="item__meta__state">受付中</p>
-            <p class="item__meta__date"><i class="far fa-calendar"></i>2020.1.1</p>
-            <p class="item__meta__locate"><i class="fas fa-map-marker-alt"></i>渋谷</p>
-          </div>
-          <p class="item__title">実装でつまずいた人のための  JS駆け込み寺</p>
-          <a href=""></a>
-        </div>
-        <div class="item">
-          <figure>
-            <img src="./images/event_03.jpg" alt="">
-          </figure>
-          <div class="item__meta">
-            <p class="item__meta__state">受付中</p>
-            <p class="item__meta__date"><i class="far fa-calendar"></i>2020.1.1</p>
-            <p class="item__meta__locate"><i class="fas fa-map-marker-alt"></i>渋谷</p>
-          </div>
-          <p class="item__title">実装でつまずいた人のための  JS駆け込み寺</p>
-          <a href=""></a>
-        </div>
-        <div class="item">
-          <figure>
-            <img src="./images/event_04.jpg" alt="">
-          </figure>
-          <div class="item__meta">
-            <p class="item__meta__state">受付中</p>
-            <p class="item__meta__date"><i class="far fa-calendar"></i>2020.1.1</p>
-            <p class="item__meta__locate"><i class="fas fa-map-marker-alt"></i>渋谷</p>
-          </div>
-          <p class="item__title">実装でつまずいた人のための  JS駆け込み寺</p>
-          <a href=""></a>
-        </div>
-
-      </section>
-      <section class="mk-info">
-        <ul class="mk-info__lists">
-          <li class="list"><time></time><p></p></li>
-        </ul>
-        <a class="mk-info__more"><p>MORE</p></a>
-        <div class="mk-info__modal">
-          <div class="mk-info__modal__inner">
-            <ul class="mk-info__modal__lists"></ul>
-          </div>
-          <a class="mk-info__close">閉じる</a>
-        </div>
-      </section>
-    </div>
   </header>
+  
   <main>
-    <section id="mk-what" class="mk-what">
-      <h2>WSもくもく会とは</h2>
-      <p class="mk-what__desc">IT業界を中心に浸透している「もくもく会」。<br>
-      同じテーマに関心のある方と一緒に、もくもくと勉強したり作業したり、そして、困ったときには相談ができる会です</p>
-      <div class="mk-what__grlly">
-        <ul class="mk-what__grlly__items">
-          <li class="item">
-            <figure><img src="./images/img_04.jpg" alt=""></figure>
-          </li>
-          <li class="item">
-            <figure><img src="./images/img_04.jpg" alt=""></figure>
-          </li>
-          <li class="item">
-            <figure><img src="./images/img_05.jpg" alt=""></figure>
-          </li>
-          <li class="item">
-            <figure><img src="./images/img_06.jpg" alt=""></figure>
-          </li>
-          <li class="item">
-            <figure><img src="./images/img_07.jpg" alt=""></figure>
-          </li>
-        </ul>
-      </div>
-    </section>
-    <section id="mk-theme" class="mk-theme">
-      <h2>3つのテーマ</h2>
-      <p class="mk-theme__desc">開催頻度の高い３つのテーマ。</p>
-      <nav class="mk-theme__nav">
-        <ul>
-          <li class="active" data-theme="js"><a>JavaScript</a></li>
-          <li data-theme="de"><a>サイトデザイン</a></li>
-          <li data-theme="pf"><a>ポートフォリオ</a></li>
-        </ul>
-      </nav>
-      <div class="mk-theme__items">
-        <div class="item" data-theme="js">
-          <div class="item__part item__nayami">
-            <h3>JavaScriptの悩み</h3>
-            <ul>
-              <li><p><i class="fas fa-check"></i>勉強しようと思うけど後回しにしてしまう。</p></li>
-              <li><p><i class="fas fa-check"></i>一通り学んだけど次に何をしたら良いの？</p></li>
-              <li><p><i class="fas fa-check"></i>初歩的なことすぎる気がして困っているけど質問できない。</p></li>
-            </ul>
-          </div>
-          <div class="item__part item__reason">
-            <h3>もくもく会に参加する理由</h3>
-            <ul>
-              <li><p><i class="fas fa-check"></i>否応無しに勉強する環境に身を置けます。</p></li>
-              <li><p><i class="fas fa-check"></i>困っている事を気軽に相談出来ます。</p></li>
-              <li><p><i class="fas fa-check"></i>普段の勉強の成果を披露する機会としても利用出来ます。</p></li>
-            </ul>
-          </div>
-        </div>
-        <div class="item" data-theme="de">
-          <div class="item__part item__nayami">
-            <h3>サイトデザインの悩み</h3>
-            <ul>
-              <li><p><i class="fas fa-check"></i>勉強しようと思うけど後回しにしてしまう。</p></li>
-              <li><p><i class="fas fa-check"></i>一通り学んだけど次に何をしたら良いの？</p></li>
-              <li><p><i class="fas fa-check"></i>初歩的なことすぎる気がして困っているけど質問できない。</p></li>
-            </ul>
-          </div>
-          <div class="item__part item__reason">
-            <h3>もくもく会に参加する理由</h3>
-            <ul>
-              <li><p><i class="fas fa-check"></i>否応無しに勉強する環境に身を置けます。</p></li>
-              <li><p><i class="fas fa-check"></i>困っている事を気軽に相談出来ます。</p></li>
-              <li><p><i class="fas fa-check"></i>普段の勉強の成果を披露する機会としても利用出来ます。</p></li>
-              <li><p><i class="fas fa-check"></i>普段の勉強の成果を披露する機会としても利用出来ます。</p></li>
-            </ul>
-          </div>
-        </div>
-        <div class="item" data-theme="pf">
-          <div class="item__part item__nayami">
-            <h3>ポートフォリオの悩み</h3>
-            <ul>
-              <li><p><i class="fas fa-check"></i>勉強しようと思うけど後回しにしてしまう。</p></li>
-              <li><p><i class="fas fa-check"></i>勉強しようと思うけど後回しにしてしまう。</p></li>
-              <li><p><i class="fas fa-check"></i>勉強しようと思うけど後回しにしてしまう。</p></li>
-              <li><p><i class="fas fa-check"></i>一通り学んだけど次に何をしたら良いの？</p></li>
-              <li><p><i class="fas fa-check"></i>初歩的なことすぎる気がして困っているけど質問できない。</p></li>
-            </ul>
-          </div>
-          <div class="item__part item__reason">
-            <h3>もくもく会に参加する理由</h3>
-            <ul>
-              <li><p><i class="fas fa-check"></i>否応無しに勉強する環境に身を置けます。</p></li>
-              <li><p><i class="fas fa-check"></i>困っている事を気軽に相談出来ます。</p></li>
-              <li><p><i class="fas fa-check"></i>普段の勉強の成果を披露する機会としても利用出来ます。</p></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="mk-qa" class="mk-qa">
-      <h2>よくある質問</h2>
-      <ul class="mk-qa__items">
-        <li class="mk-qa__item">
-          <dl>
-            <dt>
-              <p>初心者でも参加出来ますか？</p>
-              <span class="btn"></span>
-            </dt>
-            <dd>
-              <p>こんな人が来るよこんな人が来るよこんな人が来るよこんな人が来るよこんな人が来るよこんな人が来るよこんな人が来るよこんな人が来るよこんな人が来るよ</p>
-            </dd>
-          </dl>
-        </li>
-        <li class="mk-qa__item">
-          <dl>
-            <dt>
-              <p>参加費用はかかりますか？</p>
-              <span class="btn"></span>
-            </dt>
-            <dd>
-              <p>こんな人が来るよこんな人が来るよこんな人が来るよこんな人が来るよこんな人が来るよこんな人が来るよこんな人が来るよこんな人が来るよこんな人が来るよ</p>
-            </dd>
-          </dl>
-        </li>
-        <li class="mk-qa__item">
-          <dl>
-            <dt>
-              <p>参加するにはどうすればいいですか？</p>
-              <span class="btn"></span>
-            </dt>
-            <dd>
-              <p>こんな人が来るよこんな人が来るよこんな人が来るよこんな人が来るよこんな人が来るよこんな人が来るよこんな人が来るよこんな人が来るよこんな人が来るよ</p>
-            </dd>
-          </dl>
-        </li>
-      </ul>
-    </section>
-    <section id="mk-events" class="mk-events">
-      <h2>もくもく会一覧</h2>
-      <p class="mk-events__desc">開催頻度の多い３つのテーマ。</p>
-      <ul class="mk-events__items">
-        <li class="item">
-          <figure>
-            <img src="./images/event_01.jpg" alt="">
-          </figure>
-          <div class="item__meta">
-            <p class="item__meta__state">受付中</p>
-            <p class="item__meta__date">2020.1.1</p>
-          </div>
-          <p class="item__title">実装でつまずいた人のための  JS駆け込み寺</p>
-          <a href=""></a>
-        </li>
-        <li class="item">
-          <figure>
-            <img src="./images/event_02.jpg" alt="">
-          </figure>
-          <div class="item__meta">
-            <p class="item__meta__state">受付中</p>
-            <p class="item__meta__date">2020.1.1</p>
-          </div>
-          <p class="item__title">実装でつまずいた人のための  JS駆け込み寺</p>
-          <a href=""></a>
-        </li>
-        <li class="item">
-          <figure>
-            <img src="./images/event_03.jpg" alt="">
-          </figure>
-          <div class="item__meta">
-            <p class="item__meta__state">受付中</p>
-            <p class="item__meta__date">2020.1.1</p>
-          </div>
-          <p class="item__title">実装でつまずいた人のための  JS駆け込み寺</p>
-          <a href=""></a>
-        </li>
-        <li class="item">
-          <figure>
-            <img src="./images/event_04.jpg" alt="">
-          </figure>
-          <div class="item__meta">
-            <p class="item__meta__state">受付中</p>
-            <p class="item__meta__date">2020.1.1</p>
-          </div>
-          <p class="item__title">実装でつまずいた人のための  JS駆け込み寺</p>
-          <a href=""></a>
-        </li>
-        <li class="item">
-          <figure>
-            <img src="./images/event_05.jpg" alt="">
-          </figure>
-          <div class="item__meta">
-            <p class="item__meta__state">受付中</p>
-            <p class="item__meta__date">2020.1.1</p>
-          </div>
-          <p class="item__title">実装でつまずいた人のための  JS駆け込み寺</p>
-          <a href=""></a>
-        </li>
-        <li class="item">
-          <figure>
-            <img src="./images/event_06.jpg" alt="">
-          </figure>
-          <div class="item__meta">
-            <p class="item__meta__state">受付中</p>
-            <p class="item__meta__date">2020.1.1</p>
-          </div>
-          <p class="item__title">実装でつまずいた人のための  JS駆け込み寺</p>
-          <a href=""></a>
-        </li>
-        <li class="item">
-          <figure>
-            <img src="./images/event_07.jpg" alt="">
-          </figure>
-          <div class="item__meta">
-            <p class="item__meta__state">受付中</p>
-            <p class="item__meta__date">2020.1.1</p>
-          </div>
-          <p class="item__title">実装でつまずいた人のための  JS駆け込み寺</p>
-          <a href=""></a>
-        </li>
-        <li class="item">
-          <figure>
-            <img src="./images/event_08.jpg" alt="">
-          </figure>
-          <div class="item__meta">
-            <p class="item__meta__state">受付中</p>
-            <p class="item__meta__date">2020.1.1</p>
-          </div>
-          <p class="item__title">実装でつまずいた人のための  JS駆け込み寺</p>
-          <a href=""></a>
-        </li>
-        <li class="item">
-          <figure>
-            <img src="./images/event_09.jpg" alt="">
-          </figure>
-          <div class="item__meta">
-            <p class="item__meta__state">受付中</p>
-            <p class="item__meta__date">2020.1.1</p>
-          </div>
-          <p class="item__title">実装でつまずいた人のための  JS駆け込み寺</p>
-          <a href=""></a>
-        </li>
-        <li class="item">
-          <figure>
-            <img src="./images/event_10.jpg" alt="">
-          </figure>
-          <div class="item__meta">
-            <p class="item__meta__state">受付中</p>
-            <p class="item__meta__date">2020.1.1</p>
-          </div>
-          <p class="item__title">実装でつまずいた人のための  JS駆け込み寺</p>
-          <a href=""></a>
-        </li>
+    <!-- start Gradation Area -->
+    <div>
 
-      </ul>
-      <ul class="mk-events__pages">
-        <!-- ページネーション -->
-      </ul>
-    </section>
-    <section id="mk-contact" class="mk-contact">
-      <h2>CONTACT</h2>
-      <p class="mk-contact__dscr">もくもく会・勉強会のリクエストやその他のお問い合わせはこちらからどうぞ。
-      <span>※もくもく会のお申し込みは各イベントページのフォームよりお願い致します。</span></p>
-      <form class="mk-contact__form" action="" method="POST">
-        <p>お名前</p>
-        <p>
-          <input type="text" name="name" data-validate="false">
-          <span>お名前は必須です</span>
-        </p>
-        <p>メールアドレス</p>
-        <p>
-          <input type="email" name="mail" data-validate="false">
-          <span>メールアドレスが不正です</span>
-        </p>
-        <p>お問い合わせ内容</p>
-        <p>
-          <textarea name="content" data-validate="false"></textarea>
-          <span>お問い合わせ内容は必須です</span>
-        </p>
-        <p><button type="submit" name="submit" disabled>送信</button></p>
-      </form>
-    </section>
-  </main>
-  <footer>
-    <a href="#" class="btnTop"><i class="fas fa-chevron-circle-up"></i></a>
-    <p>© 2020 WEB STAFF Co.,Ltd.</p>
-  </footer>
+      <!-- slider -->
+      <section id="mk-slider" class="mk-slider pickup">
+
+          <div class="item">
+            <figure>
+              <img src="./images/event_01.jpg" alt="">
+            </figure>
+            <div class="item__meta">
+              <p class="item__meta__state">受付中</p>
+              <p class="item__meta__date"><i class="far fa-calendar"></i>2020.1.1</p>
+              <p class="item__meta__locate"><i class="fas fa-map-marker-alt"></i>渋谷</p>
+            </div>
+            <p class="item__title">実装でつまずいた人のための  JS駆け込み寺</p>
+            <a href=""></a>
+          </div>
+          <div class="item">
+            <figure>
+              <img src="./images/event_02.jpg" alt="">
+            </figure>
+            <div class="item__meta">
+              <p class="item__meta__state">受付中</p>
+              <p class="item__meta__date"><i class="far fa-calendar"></i>2020.1.1</p>
+              <p class="item__meta__locate"><i class="fas fa-map-marker-alt"></i>渋谷</p>
+            </div>
+            <p class="item__title">実装でつまずいた人のための  JS駆け込み寺</p>
+            <a href=""></a>
+          </div>
+        </section>
+
+        <!-- infomation -->
+        <section class="info">
+
+          <ul class="info__list">
+            <li class="item">
+              <time></time><p></p>
+            </li>
+          </ul>
+
+          <a class="info__modal__open"><p>MORE</p></a>
+          <div class="info__modal">
+            <div class="info__modal__inner">
+              <ul class="info__modal__list"></ul>
+            </div>
+            <a class="info__modal__close">閉じる</a>
+          </div>
+          
+        </section>
+
+    </div>
+    <!-- end Gradation Area -->
+
 
 </body>
 </html>
