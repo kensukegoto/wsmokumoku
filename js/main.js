@@ -122,6 +122,7 @@
  */
 (()=>{
 
+  return false;
   var loopId = null;
 
   function makeCarousel(){
@@ -177,5 +178,44 @@
 
 
 
+
+})();
+
+/**
+ * タブ
+ */
+(()=>{
+  var $nav = $(".theme__nav li");
+
+  $nav.on("click",function(){
+    $(".theme__nav .active").removeClass("active");
+    $(this).addClass("active");
+    var idx = $(".theme__nav li").index(this);
+    tabChange(idx);
+  });
+
+  $nav.eq(0).click();
+
+  function tabChange(idx){
+
+    $(".theme__content .item").each( function (i) {
+      if(i === idx){
+        $(this).css({
+          display: "flex",
+        })
+        setTimeout(()=>{
+          $(this).css({
+            opacity: 1
+          })
+        },10)
+        
+      }else{
+        $(this).css({
+          display: "none",
+          opacity: 0
+        });
+      }
+    })
+  }
 
 })();
