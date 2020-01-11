@@ -11,7 +11,6 @@ html{
 body{
   /* chromeのバグ回避 bodyのremが効かない */
   font-size: 1.6em;
-  overflow: hidden;
 }
 
 .none {
@@ -45,12 +44,33 @@ body{
 
 .main{
   margin-top: 60px;
+  overflow: hidden;
 }
 .main__head{
   padding-top: 48px;
   padding-bottom: 48px;
 }
 
+h2{
+  font-size: 2.4rem;
+  margin: 0 12px 24px 12px;
+  text-align: center;
+}
+.lead{
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 12px 24px 12px;
+}
+@media screen and (min-width: 960px){
+  h2{
+    font-size: 3.2rem;
+    margin: 0 auto 32px auto;
+  }
+  .lead{
+    margin: 0 auto 24px auto;
+    text-align: center;
+  }
+}
 /* ハンバーガー
 ------------------------------------------------ */
 .burger__btn{
@@ -365,4 +385,42 @@ body{
   .info__modal__open{
     width: 80px;
   }
+}
+
+/* WSもくもく会とは
+------------------------------------------------ */
+.whatis{
+  padding-top: 48px;
+}
+.whatis__grlly{
+  padding: 48px 0;
+}
+.whatis__carousel{
+  white-space: nowrap;
+  letter-spacing: -1em;
+
+}
+.whatis__carousel__set{
+  display: inline-block;
+  white-space: nowrap;
+}
+.whatis__carousel__set .item{
+  display: inline-block;
+  letter-spacing: normal;
+  width: 150px;
+  transition: transform .3s;
+  cursor: pointer;
+}
+.whatis__carousel__set .item:hover{
+  transform: scale(2);
+}
+.whatis__carousel__set .item img{
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+/* ３つのテーマ
+------------------------------------------------ */
+.theme{
+  pt48
 }
