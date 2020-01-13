@@ -169,7 +169,7 @@ h2{
 }
 .pickup .item{
   position: relative;
-  margin: 0 16px;
+  margin: 0 12px;
 }
 .pickup .item__meta{
   display: flex;
@@ -275,7 +275,7 @@ h2{
 .info{
   display: flex;
   justify-content: space-between;
-  margin: 0 16px;
+  margin: 0 12px;
   border: 1px solid #efefef;
   max-width: 960px;
 }

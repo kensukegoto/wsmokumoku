@@ -122,7 +122,6 @@
  */
 (()=>{
 
-  return;
 
   var loopId = null;
 
