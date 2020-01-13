@@ -158,7 +158,6 @@
 
     <section id="theme" class="theme">
       <h2>3つのテーマ</h2>
-      <p class="lead">開催頻度の高い３つのテーマ。</p>
       <nav class="theme__nav">
         <ul>
           <li data-theme="js"><a>JavaScript</a></li>
@@ -393,6 +392,30 @@
           <!-- ページネーション -->
         </ul>
       </div>
+    </section>
+
+    <section id=contact" class="contact">
+      <h2>CONTACT</h2>
+      <p class="lead">もくもく会・勉強会のリクエストやその他のお問い合わせはこちらからどうぞ（※ご参加のお申し込みは各イベントページのフォームよりお願い致します）。
+      </p>
+      <form class="contact__form" action="" method="POST">
+        <p>お名前</p>
+        <p>
+          <input type="text" name="name" data-validate="false">
+          <span>お名前は必須です</span>
+        </p>
+        <p>メールアドレス</p>
+        <p>
+          <input type="email" name="mail" data-validate="false">
+          <span>メールアドレスが不正です</span>
+        </p>
+        <p>お問い合わせ内容</p>
+        <p>
+          <textarea name="content" data-validate="false"></textarea>
+          <span>お問い合わせ内容は必須です</span>
+        </p>
+        <p><button type="submit" name="submit" disabled>送信</button></p>
+      </form>
     </section>
 
 

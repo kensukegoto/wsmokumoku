@@ -58,20 +58,22 @@ h2{
 }
 .lead{
   line-height: 1.6;
-  max-width: 960px;
+  max-width: 700px;
   margin: 0 12px 24px 12px;
-  text-align: center;
 }
 
 
+@media screen and (min-width: 700px){
+  .lead{
+    margin: 0 auto 24px auto;
+  }
+}
 @media screen and (min-width: 960px){
   h2{
     font-size: 3.2rem;
     margin: 0 auto 32px auto;
   }
-  .lead{
-    margin: 0 auto 24px auto;
-  }
+
 }
 /* ハンバーガー
 ------------------------------------------------ */
@@ -565,7 +567,8 @@ h2{
   max-width: 700px;
 }
 
-/* イベント一覧 */
+/* イベント一覧
+------------------------------------------------ */
 .events{
   padding-top: 48px;
 }
@@ -674,4 +677,63 @@ h2{
     font-size: 1.6rem;
   }
 
+}
+
+/* フォーム
+------------------------------------------------ */
+.contact{
+  padding-top: 48px;
+}
+.contact .lead span{
+  display: block;
+  font-size: 1.4rem;
+  margin-top: 8px;
+}
+.contact__form{
+  margin: 0 12px;
+  max-width: 700px;
+}
+.contact__form p{
+  font-weight: bold;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+.contact__form span{
+  display: none;
+  color: red;
+}
+.contact__form input{
+  padding: 8px;
+  margin-bottom: 8px;
+  width: 100%;
+  border: 1px solid #dedede;
+}
+.contact__form textarea{
+  padding: 8px;
+  width: 100%;
+  height: 240px;
+  border: 1px solid #dedede;
+}
+.contact__form button{
+  background: #ff8a65;
+  color: #fff;
+  height: 48px;
+  width: 128px;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 auto;
+  display: block;
+  cursor: pointer;
+}
+
+/* 送信ボタン */
+.contact__form button:disabled{
+  opacity: .5;
+  cursor: default;
+}
+
+@media screen and (min-width: 700px){
+  .contact__form{
+    margin: 0 auto;
+  }
 }
