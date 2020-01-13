@@ -197,10 +197,14 @@ h2{
   margin-right: 8px;
 }
 .pickup .item__title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 16px;
   font-weight: bold;
-  padding: 20px;
   line-height: 1.6;
   background: #fff;
+  height: 80px;
 }
 
 .pickup .item__link {
