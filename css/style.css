@@ -273,6 +273,8 @@ h2{
 /* お知らせ
 ------------------------------------------------ */
 .info{
+  display: flex;
+  justify-content: space-between;
   margin: 0 16px;
   border: 1px solid #efefef;
   max-width: 960px;
@@ -280,6 +282,7 @@ h2{
 .info__list{
   background-color: #ffffff;
   padding: 8px;
+  width: calc(100% - 48px);
 }
 .info__list time{
   font-size: 1.4rem;
@@ -292,13 +295,13 @@ h2{
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 48px;
   background-color: #000000;
   color: #fff;
   padding: 8px;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   cursor: pointer;
   opacity: 1;
-  transition: opacity .3;
 }
 .info__modal__open:hover{
   opacity: .8;
@@ -369,12 +372,7 @@ h2{
   transform-origin: left;
 }
 
-@media screen and (min-width: 960px){
-  .info{
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-  }
+@media screen and (min-width: 700px){
   .info__list{
     padding: 8px 16px;
     width: calc(100% - 80px);
@@ -388,6 +386,11 @@ h2{
   }
   .info__modal__open{
     width: 80px;
+  }
+}
+@media screen and (min-width: 960px){
+  .info{
+    margin: 0 auto;
   }
 }
 

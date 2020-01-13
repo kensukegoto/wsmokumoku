@@ -35,6 +35,7 @@
  */
 (()=>{
 
+
   $('.pickup__slider').slick({
     appendArrows: $(".pickup"),
     infinite: true,
@@ -121,6 +122,8 @@
  */
 (()=>{
 
+  return;
+
   var loopId = null;
 
   function makeCarousel(){
@@ -168,7 +171,7 @@
 
     if(before === $(window).innerWidth()) return;
     before = $(window).innerWidth();
-    
+
     clearTimeout(resizeId);
 
     resizeId = setTimeout(()=>{
