@@ -174,7 +174,7 @@
     clearTimeout(resizeId);
 
     resizeId = setTimeout(()=>{
-      clearTimeout(loopId)
+      clearInterval(loopId)
       makeCarousel();
     },300)
 
