@@ -2,7 +2,7 @@
  * ハンバーガーメニュー
  */
 (()=>{
-  
+
   var time = 300;
   var $btn = $(".burger__btn");
   $btn.css("transition","background-color " + time + "ms")
@@ -121,7 +121,6 @@
  */
 (()=>{
 
-  return false;
   var loopId = null;
 
   function makeCarousel(){
@@ -163,8 +162,12 @@
   makeCarousel();
 
   var resizeId = null;
+  var before = $(window).innerWidth();
 
   $(window).on("resize",()=> {
+
+    if(before === $(window).innerWidth()) return;
+    before = $(window).innerWidth();
     
     clearTimeout(resizeId);
 
@@ -236,6 +239,7 @@
  * ページネーション
  */
 (()=>{
+
   $items = $(".events__inner .item");
   // ページネーション作成
   $pn = $(".events__pages");
@@ -248,7 +252,7 @@
   $(".events__pages li").on("click",function(){
     var page = $(".events__pages li").index(this);
     page += 1;
-    showItems(page);
+    showItems(page,true);
   })
 
   // 何ページ目のコンテンツか
@@ -257,15 +261,19 @@
     $items.eq(i).addClass("page-" + page);
   }
 
-  showItems(1);
+  showItems(1,false);
 
-  function showItems(page){
+  function showItems(page,animation){
     // ページネーションのactive切り替え
     $(".events__pages li.active").removeClass("active");
     $(".events__pages li").eq(page - 1).addClass("active");
 
     $items.removeClass("active");
     $(".events__inner").find(".page-" + page).addClass("active");
+
+    if(animation){
+      var pos = $(".events__inner").offset().top - $("header").innerHeight();
+      $("html,body").animate({scrollTop:pos},300,"swing")  }
     
   }
 
