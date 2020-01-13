@@ -500,3 +500,66 @@ h2{
   }
 }
 
+/* よくある質問
+------------------------------------------------ */
+.qa__content{
+  padding: 32px 12px;
+}
+.qa__content dt{
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 8px;
+  margin: 24px auto 0 auto;
+  max-width: 700px;
+}
+.qa__content dt:first-child{
+  margin-top: 0;
+}
+.qa__content dt .btn{
+  background-color: #aaa;
+  height: 32px;
+  width: 32px;
+  padding: 4px;
+}
+.qa__content dt .btn span{
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform .3s;
+}
+.qa__content dt.open .btn span{
+  transform: rotate(-45deg);
+}
+
+.qa__content dt .btn span::before{
+  content: "";
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background-color: #fff;
+}
+.qa__content dt .btn span::after{
+  content: "";
+  height: 100%;
+  width: 2px;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  background-color: #fff;
+}
+.qa__content dd{
+  padding: 16px;
+  background-color: #fff;
+  line-height: 1.6;
+  display: none;
+  margin: 2px auto 0 auto;
+  max-width: 700px;
+}
