@@ -2,6 +2,7 @@
  * ハンバーガーメニュー
  */
 (()=>{
+  
   var time = 300;
   var $btn = $(".burger__btn");
   $btn.css("transition","background-color " + time + "ms")
@@ -18,8 +19,6 @@
 
     // モーダルを閉じる
     $btn.click();
-
-    return false;
 
     var speed = 500;
     var href = $(this).attr("href");
