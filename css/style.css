@@ -504,6 +504,7 @@ h2{
 ------------------------------------------------ */
 .qa__content{
   padding: 32px 12px;
+  background-color: #fb9db8;
 }
 .qa__content dt{
   background-color: #fff;
@@ -562,4 +563,115 @@ h2{
   display: none;
   margin: 2px auto 0 auto;
   max-width: 700px;
+}
+
+/* イベント一覧 */
+.events{
+  padding-top: 48px;
+}
+.events__inner{
+  padding: 48px 0;
+}
+.events__content{
+  max-width: 960px;
+  margin: 0 12px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.events__content .item{
+  width: calc(50% - 8px);
+  background-color: #fff;
+  margin-bottom: 32px;
+  display: none;
+}
+.events__content .item.active{
+  display: block;
+}
+@media screen and (max-width: 959px){
+  .events__content .item:nth-child(odd){
+    margin-right: 8px;
+  }
+  .events__content .item:nth-child(even){
+    margin-left: 8px;
+  }
+}
+.events__content .item__meta{
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+}
+.events__content .item__meta__state{
+  height: 24px;
+  width: 80px;
+  background-color: #000000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.events__content .item__meta__date{
+  width: calc(100% - 80px);
+  text-align: center;
+}
+.events__content .item__title{
+  padding: 8px;
+  font-size: 1.4rem;
+  line-height: 1.6;
+}
+
+/* 一覧 ページネーション */
+.events__pages {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.events__pages li{
+  width: 40px;
+  height: 40px;
+  border: 1px solid #aaa;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 16px;
+  cursor: pointer;
+}
+.events__pages li:last-child{
+  margin-right: 0;
+}
+.events__pages li.active{
+  background-color: #000;
+}
+.events__pages li.active a{
+  color: #fff;
+}
+
+@media screen and (min-width: 960px){
+  .events__content{
+    margin: 0 auto;
+  }
+  .events__content .item{
+    width: calc(320px - 16px);
+    background-color: #fff;
+  }
+  .events__content .item:nth-child(3n + 1){
+    margin-right: 16px;
+  }
+  .events__content .item:nth-child(3n + 2){
+    margin-right: 8px;
+    margin-left: 8px;
+  }
+  .events__content .item:nth-child(3n){
+    margin-left: 16px;
+  }
+  .events__content .item__meta{
+    font-size: 1.4rem;
+  }
+  .events__content .item__meta__state{
+    height: 36px;
+  }
+  .events__content .item__title{
+    font-size: 1.6rem;
+  }
+
 }
