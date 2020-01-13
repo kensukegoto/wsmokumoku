@@ -464,6 +464,11 @@ h2{
   max-width: 700px;
   display: none;
   transition: opacity .5s;
+  opacity: 0;
+}
+.theme__content .item.active{
+  display: block;
+  /* opacity: 1; */
 }
 .theme__content .item__part{
   margin-bottom: 32px;
@@ -479,12 +484,15 @@ h2{
 .theme__content .item__part i {
   margin-right: 8px;
 }
+@media screen and (min-width: 700px){
+  .theme__content .item.active{
+    display: flex;
+  }
+}
 
 @media screen and (min-width: 960px){
   .theme__content .item {
-    display: flex;
     max-width: 960px;
-    
   }
   .theme__content .item__part{
     margin-bottom: 0;
@@ -492,8 +500,3 @@ h2{
   }
 }
 
-@media screen and (min-width: 960px){
-
-
-  
-}

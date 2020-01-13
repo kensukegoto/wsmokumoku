@@ -200,20 +200,18 @@
 
     $(".theme__content .item").each( function (i) {
       if(i === idx){
-        $(this).css({
-          display: "flex",
-        })
+        $(this).addClass("active");
         setTimeout(()=>{
           $(this).css({
             opacity: 1
           })
-        },10)
+        },1)
         
       }else{
+        $(this).removeClass("active");
         $(this).css({
-          display: "none",
           opacity: 0
-        });
+        })
       }
     })
   }
