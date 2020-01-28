@@ -155,9 +155,8 @@ h2{
 }
 .burger__modal__menu li{
   font-size: 1.6rem;
-  line-height: 2;
-  border-bottom: 1px solid #aaa;
-}
+  line-height: 3;
+ }
 
 /* スライダー
 ------------------------------------------------ */
@@ -525,7 +524,7 @@ h2{
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
-  padding: 8px;
+  padding: 16px;
   margin: 24px auto 0 auto;
   max-width: 700px;
 }
@@ -533,10 +532,9 @@ h2{
   margin-top: 0;
 }
 .qa__content dt .btn{
-  background-color: #aaa;
-  height: 32px;
-  width: 32px;
-  padding: 4px;
+  /* background-color: #aaa; */
+  height: 16px;
+  width: 16px;
 }
 .qa__content dt .btn span{
   display: block;
@@ -557,7 +555,7 @@ h2{
   top: 50%;
   left: 0;
   transform: translateY(-50%);
-  background-color: #fff;
+  background-color: #aaa;
 }
 .qa__content dt .btn span::after{
   content: "";
@@ -567,7 +565,7 @@ h2{
   left: 50%;
   top: 0;
   transform: translateX(-50%);
-  background-color: #fff;
+  background-color: #aaa;
 }
 .qa__content dd{
   padding: 16px;

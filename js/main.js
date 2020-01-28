@@ -242,9 +242,9 @@
  */
 (()=>{
 
-  $items = $(".events__inner .item");
+  var $items = $(".events__inner .item");
   // ページネーション作成
-  $pn = $(".events__pages");
+  var $pn = $(".events__pages");
   var num = Math.ceil($items.length / 6);
   for(var i = 1,l = num;i <= l; i++){
     var li = "<li><a>" + i + "</a></li>";
@@ -286,8 +286,8 @@
  */
 (()=>{
 
-  $inputs = $(".contact__form input,.contact__form textarea");
-  $submit = $(".contact__form button");
+  var $inputs = $(".contact__form input,.contact__form textarea");
+  var $submit = $(".contact__form button");
 
   $inputs.on("input",function(){
     validate($(this));
