@@ -1,7 +1,9 @@
 /**
  * ハンバーガーメニュー
  */
-(()=>{
+
+  
+$(function(){
 
   var time = 300;
   var $btn = $(".burger__btn");
@@ -27,13 +29,13 @@
 
   });
 
-})();
+});
 
 
 /**
  * pick up(スライダー)
  */
-(()=>{
+$(function(){
 
 
   $('.pickup__slider').slick({
@@ -57,12 +59,12 @@
     ]
   });
   
-})();
+});
 
 /**
  * お知らせ
  */
-(()=>{
+$(function(){
   $.ajax({
     url: "./infomation.json",
     dataType: "json"
@@ -76,10 +78,10 @@
 
     var idx = 0;
 
-    setInterval(()=>{
+    setInterval(function(){
       $info.css("opacity",0);
       // または$.animate
-      setTimeout(()=>{
+      setTimeout(function(){
         idx = (idx + 1) % json.length;
         changeInfo(json[idx]);
         $info.css("opacity",1);
@@ -115,12 +117,12 @@
 
   });
 
-})();
+});
 
 /**
  * カルーセル
  */
-(()=>{
+$(function(){
 
 
   var loopId = null;
@@ -143,7 +145,7 @@
     var cW = num * setW;
     var stop = false;
     
-    loopId = setInterval(()=>{
+    loopId = setInterval(function(){
       if(stop) return;
       if(cW + left === 1){
         left = 0;
@@ -153,10 +155,10 @@
       $carousel.css("transform","translateX(" + left + "px");
     },33);
 
-    $carousel.on("mouseenter",()=>{
+    $carousel.on("mouseenter",function(){
       stop = true;
     });
-    $carousel.on("mouseleave",()=>{
+    $carousel.on("mouseleave",function(){
       stop = false;
     });
   }
@@ -166,14 +168,14 @@
   var resizeId = null;
   var before = $(window).innerWidth();
 
-  $(window).on("resize",()=> {
+  $(window).on("resize",function() {
 
     if(before === $(window).innerWidth()) return;
     before = $(window).innerWidth();
 
     clearTimeout(resizeId);
 
-    resizeId = setTimeout(()=>{
+    resizeId = setTimeout(function(){
       clearInterval(loopId)
       makeCarousel();
     },300)
@@ -183,12 +185,12 @@
 
 
 
-})();
+});
 
 /**
  * タブ
  */
-(()=>{
+$(function(){
   var $nav = $(".theme__nav li");
 
   $nav.on("click",function(){
@@ -205,8 +207,9 @@
     $(".theme__content .item").each( function (i) {
       if(i === idx){
         $(this).addClass("active");
-        setTimeout(()=>{
-          $(this).css({
+        var $this = $(this);
+        setTimeout(function(){
+          $this.css({
             opacity: 1
           })
         },1)
@@ -220,12 +223,12 @@
     })
   }
 
-})();
+});
 
 /**
  * アコーディオン
  */
-(()=>{
+$(function(){
   var $q = $(".qa__content dt");
 
   $q.on("click",e =>{
@@ -235,12 +238,12 @@
     $this.next().slideToggle(300);
 
   })
-})();
+});
 
 /**
  * ページネーション
  */
-(()=>{
+$(function(){
 
   var $items = $(".events__inner .item");
   // ページネーション作成
@@ -279,12 +282,12 @@
     
   }
 
-})();
+});
 
 /**
  * フォームのバリデーション
  */
-(()=>{
+$(function(){
 
   var $inputs = $(".contact__form input,.contact__form textarea");
   var $submit = $(".contact__form button");
@@ -334,12 +337,12 @@
     }
   }
 
-})();
+});
 
 /**
  * トップへ戻る
  */
-(()=>{
+$(function(){
 
   var $btn = $(".btnTop");
   $btn.on("click",function(){
@@ -356,4 +359,4 @@
     }
   });
 
-})();
+});
