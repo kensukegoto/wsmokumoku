@@ -496,6 +496,9 @@ h2{
   .theme__content .item.active{
     display: flex;
   }
+  .theme__content .item__part{
+    flex: 1;
+  }
 }
 
 @media screen and (min-width: 960px){
