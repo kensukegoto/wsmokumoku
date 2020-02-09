@@ -8,7 +8,7 @@ $(function(){
     $("html,body").animate({scrollTop: 0 }, 500, "swing");
   });
 
-  var winH = $(window).innerHeight();
+  var winH = $(window).height();
 
   $(window).on("scroll",function(){
     if(winH / 2 < $(window).scrollTop()){

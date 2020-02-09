@@ -6,15 +6,9 @@ $(function(){
   var $inputs = $(".contact__form input,.contact__form textarea");
   var $submit = $(".contact__form button");
 
-  $inputs.on("input",function(){
-    validate($(this));
-  });
-  $inputs.on("focus",function(){
-    validate($(this));
-  });
-
-  function validate($input){
-
+  $inputs.on("input focus",function(){
+  
+    var $input = $(this);
     var value = $input.val().trim();
     var name = $input.attr("name");
     var error = false;
@@ -49,6 +43,14 @@ $(function(){
     }else{
       $submit.attr("disabled",true)
     }
-  }
+
+  });
+
+  $(".contact__form").on("submit",function(){
+    if($inputs.length !== $(".contact__form .isClear").length){
+      return false;
+    }
+  });
+  
 
 });

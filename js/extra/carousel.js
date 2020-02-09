@@ -3,7 +3,6 @@
  */
 $(function(){
 
-
   var loopId = null;
 
   function makeCarousel(){
@@ -15,7 +14,7 @@ $(function(){
     var num = Math.ceil(winW / setW);
 
     $carousel.empty();
-    // num * 2 - 1 は１つのセットが最初からあるから
+  
     for(var i = 0;i < num * 2;i++){
       $carousel.append($set.clone());
     }

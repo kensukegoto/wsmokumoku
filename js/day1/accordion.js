@@ -4,9 +4,9 @@
 $(function(){
   var $q = $(".qa__content dt");
 
-  $q.on("click",e =>{
+  $q.on("click",function(){
 
-    $this = $(e.currentTarget);
+    $this = $(this);
     $this.toggleClass("open");
     $this.next().slideToggle(300);
 
